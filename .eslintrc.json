@@ -23,6 +23,8 @@
     "react/jsx-one-expression-per-line": 0,
     "react/no-unknown-property": 0,
     "react/jsx-props-no-spreading": 0,
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/no-redundant-roles": 0
   }
 }
