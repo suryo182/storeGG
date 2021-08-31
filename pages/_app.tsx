@@ -12,6 +12,7 @@ import '../styles/overview.css';
 import '../styles/sidebar.css';
 import '../styles/transactions.css';
 import '../styles/edit-profile.css';
+import '../styles/navbar-log-in.css';
 
 import { useEffect } from 'react';
 import Head from 'next/head';
