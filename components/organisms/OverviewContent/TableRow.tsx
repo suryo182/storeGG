@@ -1,24 +1,24 @@
 import Image from 'next/image';
 
-interface TransactionItemProps {
+interface TableRowProps {
   title: string;
   type: 'Mobile' | 'Desktop';
-  nominal: string;
-  price: string;
+  item: number;
+  price: number;
   status: 'Pending' | 'Success' | 'Failed';
   image: 'overview-1' | 'overview-2' | 'overview-3' | 'overview-4';
 }
 
-export default function TransactionItem({
+export default function TableRow({
   title,
   type,
-  nominal,
+  item,
   price,
   status,
   image,
-}: TransactionItemProps) {
+}: TableRowProps) {
   return (
-    <>
+    <tr className="align-middle">
       <th scope="row">
         <div className="float-start me-3 mb-lg-0 mb-3">
           <Image src={`/img/${image}.png`} width={80} height={60} alt="" />
@@ -33,10 +33,10 @@ export default function TransactionItem({
         </div>
       </th>
       <td>
-        <p className="fw-medium color-palette-1 m-0">{nominal} Gold</p>
+        <p className="fw-medium color-palette-1 m-0">{item} Gold</p>
       </td>
       <td>
-        <p className="fw-medium text-start color-palette-1 m-0">{price}</p>
+        <p className="fw-medium text-start color-palette-1 m-0">Rp {price}</p>
       </td>
       <td>
         <div>
@@ -46,6 +46,6 @@ export default function TransactionItem({
           </p>
         </div>
       </td>
-    </>
+    </tr>
   );
 }
