@@ -1,8 +1,10 @@
-import Image from 'next/image';
 import cx from 'classnames';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface MenuItemProps {
   name: string;
+  href: string;
   logo:
     | 'overview'
     | 'card'
@@ -17,6 +19,7 @@ export default function MenuItem({
   name,
   logo,
   isActive,
+  href,
 }: Partial<MenuItemProps>) {
   const menuItemClass = cx({
     item: true,
@@ -35,9 +38,9 @@ export default function MenuItem({
         />
       </div>
       <p className="item-title m-0">
-        <a href="/" className="text-lg text-decoration-none">
-          {name}
-        </a>
+        <Link href={`${href}`}>
+          <a className="text-lg text-decoration-none">{name}</a>
+        </Link>
       </p>
     </div>
   );

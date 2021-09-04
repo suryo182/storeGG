@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import InputForm from '../../molecules/InputForm';
+import Input from '../../atoms/Input';
 import MiniCard from '../../molecules/MiniCard';
 
 export default function DetailForm() {
@@ -8,14 +8,8 @@ export default function DetailForm() {
     <form action="./checkout.html" method="POST">
       <div className="pt-md-50 pt-30">
         <div className="">
-          <label
-            htmlFor="ID"
-            className="form-label text-lg fw-medium color-palette-1 mb-10"
-          >
-            Verify ID
-          </label>
-
-          <InputForm
+          <Input
+            label="Verify ID"
             type="text"
             id="ID"
             name="ID"
@@ -111,13 +105,8 @@ export default function DetailForm() {
         </fieldset>
       </div>
       <div className="pb-50">
-        <label
-          htmlFor="bankAccount"
-          className="form-label text-lg fw-medium color-palette-1 mb-10"
-        >
-          Bank Account Name
-        </label>
-        <InputForm
+        <Input
+          label="Bank Account Name"
           type="text"
           id="bankAccount"
           name="bankAccount"

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import InputForm from '../../molecules/InputForm';
+import Input from '../../atoms/Input';
 
 export default function SignInForm() {
   return (
@@ -17,13 +17,8 @@ export default function SignInForm() {
             Masuk untuk melakukan proses top up
           </p>
           <div className="pt-50">
-            <label
-              htmlFor="email"
-              className="form-label text-lg fw-medium color-palette-1 mb-10"
-            >
-              Email Address
-            </label>
-            <InputForm
+            <Input
+              label="Email Address"
               type="email"
               id="email"
               name="email"
@@ -32,13 +27,8 @@ export default function SignInForm() {
             />
           </div>
           <div className="pt-30">
-            <label
-              htmlFor="password"
-              className="form-label text-lg fw-medium color-palette-1 mb-10"
-            >
-              Password
-            </label>
-            <InputForm
+            <Input
+              label="Password"
               type="password"
               id="password"
               name="password"
@@ -47,7 +37,7 @@ export default function SignInForm() {
             />
           </div>
           <div className="button-group d-flex flex-column mx-auto pt-50">
-            <Link href="/">
+            <Link href="/member">
               <a
                 className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16"
                 role="button"

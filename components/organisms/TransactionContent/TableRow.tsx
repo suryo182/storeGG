@@ -4,19 +4,18 @@ import cx from 'classnames';
 interface TableRowProps {
   title: string;
   type: 'Mobile' | 'Desktop';
-  item: number;
+  image: 'overview-1' | 'overview-2' | 'overview-3' | 'overview-4';
+  nominal: number;
   price: number;
   status: 'Pending' | 'Success' | 'Failed';
-  image: 'overview-1' | 'overview-2' | 'overview-3' | 'overview-4';
 }
-
 export default function TableRow({
   title,
   type,
-  item,
+  image,
+  nominal,
   price,
   status,
-  image,
 }: TableRowProps) {
   const statusClass = cx({
     'float-start icon-status': true,
@@ -24,8 +23,9 @@ export default function TableRow({
     success: status === 'Success',
     failed: status === 'Failed',
   });
+
   return (
-    <tr className="align-middle">
+    <tr data-category="pending" className="align-middle">
       <th scope="row">
         <div className="float-start me-3 mb-lg-0 mb-3">
           <Image src={`/img/${image}.png`} width={80} height={60} alt="" />
@@ -40,10 +40,10 @@ export default function TableRow({
         </div>
       </th>
       <td>
-        <p className="fw-medium color-palette-1 m-0">{item} Gold</p>
+        <p className="fw-medium color-palette-1 m-0">{nominal} Gold</p>
       </td>
       <td>
-        <p className="fw-medium text-start color-palette-1 m-0">Rp {price}</p>
+        <p className="fw-medium color-palette-1 m-0">Rp {price}</p>
       </td>
       <td>
         <div>
@@ -52,6 +52,14 @@ export default function TableRow({
             {status}
           </p>
         </div>
+      </td>
+      <td>
+        <a
+          href="../member/transactions-detail.html"
+          className="btn btn-status rounded-pill text-sm"
+        >
+          Details
+        </a>
       </td>
     </tr>
   );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Input from '../../atoms/Input';
 
 export default function SignUpForm() {
   return (
@@ -17,50 +18,32 @@ export default function SignUpForm() {
           Daftar dan bergabung dengan kami
         </p>
         <div className="pt-50">
-          <label
-            htmlFor="name"
-            className="form-label text-lg fw-medium color-palette-1 mb-10"
-          >
-            Full Name
-          </label>
-          <input
+          <Input
+            label="Full Name"
             type="text"
-            className="form-control rounded-pill text-lg"
-            id="name"
             name="name"
-            aria-describedby="name"
+            id="name"
+            ariaDesc="name"
             placeholder="Enter your name"
           />
         </div>
         <div className="pt-30">
-          <label
-            htmlFor="email"
-            className="form-label text-lg fw-medium color-palette-1 mb-10"
-          >
-            Email Address
-          </label>
-          <input
+          <Input
+            label="Email Address"
             type="email"
-            className="form-control rounded-pill text-lg"
-            id="email"
             name="email"
-            aria-describedby="email"
+            id="email"
+            ariaDesc="email"
             placeholder="Enter your email address"
           />
         </div>
         <div className="pt-30">
-          <label
-            htmlFor="password"
-            className="form-label text-lg fw-medium color-palette-1 mb-10"
-          >
-            Password
-          </label>
-          <input
+          <Input
+            label="Password"
             type="password"
-            className="form-control rounded-pill text-lg"
-            id="password"
             name="password"
-            aria-describedby="password"
+            id="password"
+            ariaDesc="password"
             placeholder="Your password"
           />
         </div>
