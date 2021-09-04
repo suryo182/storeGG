@@ -1,5 +1,5 @@
-import DetailForm from '../components/molecules/DetailForm';
-import DetailGame from '../components/molecules/DetailGame';
+import DetailForm from '../components/organisms/DetailForm';
+import DetailGame from '../components/organisms/DetailGame';
 import Footer from '../components/organisms/Footer';
 import Navbar from '../components/organisms/Navbar';
 
